@@ -1,0 +1,22 @@
+{
+  "name": "beyondtoken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "K",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-bignumber": "^2.0.2",
+    "lite-server": "^2.4.0",
+    "openzeppelin-solidity": "^2.0.0",
+    "pify": "^4.0.1",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3-utils": "^1.0.0-beta.36",
+    "zos-lib": "^2.0.1"
+  }
+}
