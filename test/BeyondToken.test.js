@@ -8,8 +8,8 @@ require('chai')
 
 contract('Token', function (accounts) {
   const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
-  const initialSupply = new BigNumber(6e+9);
-  const transferAmount = new BigNumber(1e+9);
+  const initialSupply = new BigNumber(1e+27);
+  const transferAmount = new BigNumber(1e+18);
 
   beforeEach(async function () {
     this.token = await Token.new();
@@ -39,7 +39,7 @@ contract('Token', function (accounts) {
     describe('when the recipient is not the zero address', function () {
       it('transfers the requested amount', async function () {
         await this.token.transfer(accounts[1], transferAmount, { from: accounts[0] });
-        (await this.token.balanceOf(accounts[0])).should.be.bignumber.equal(initialSupply - transferAmount);
+        (await this.token.balanceOf(accounts[0])).should.be.bignumber.equal(initialSupply.minus(transferAmount));
         (await this.token.balanceOf(accounts[1])).should.be.bignumber.equal(transferAmount);
       });
     });

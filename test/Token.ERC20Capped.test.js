@@ -6,9 +6,7 @@ const { shouldBehaveLikeERC20Capped } = require('./behaviors/ERC20Capped.behavio
 const Token = artifacts.require('BeyondToken');
 
 contract('Token', function ([_, minter, ...otherAccounts]) {
-  //const cap = ether(1000);
-  //const cap = ether(10 ** 10);
-  const cap = new web3.BigNumber(1e+10);
+  const cap = new web3.BigNumber(1e+28);
 
   /*
   it('requires a non-zero cap', async function () {

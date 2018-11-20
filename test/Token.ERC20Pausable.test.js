@@ -4,10 +4,10 @@ const shouldFail = require('./helpers/shouldFail');
 const Token = artifacts.require('BeyondToken');
 const { shouldBehaveLikePublicRole } = require('./behaviors/PublicRole.behavior');
 
-const initialSupply = 6 * (10 ** 9);
-const transferAmount = 1 * (10 ** 9);
-const approveAmount = 1 * (10 ** 9);
-const allowanceAmount = 4 * (10 ** 8);
+const initialSupply = 1 * (10 ** 27);
+const transferAmount = 10 * (10 ** 18);
+const approveAmount = 5 * (10 ** 18);
+const allowanceAmount = 5 * (10 ** 18);
 
 contract('Token', function ([_, pauser, otherPauser, recipient, anotherAccount, ...otherAccounts]) {
   beforeEach(async function () {

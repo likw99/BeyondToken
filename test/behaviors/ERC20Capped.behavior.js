@@ -9,7 +9,7 @@ require('chai')
 function shouldBehaveLikeERC20Capped (minter, [anyone], cap) {
   describe('capped token', function () {
     const from = minter;
-    const initialSupply = 6 * (10 ** 9);
+    const initialSupply = new BigNumber(1e+27);
 
     it('should start with the correct cap', async function () {
       (await this.token.cap()).should.be.bignumber.equal(cap);
@@ -17,7 +17,7 @@ function shouldBehaveLikeERC20Capped (minter, [anyone], cap) {
 
     it('should mint when amount is less than cap', async function () {
       await this.token.mint(anyone, 1, { from });
-      (await this.token.totalSupply()).should.be.bignumber.equal(initialSupply+1);
+      (await this.token.totalSupply()).should.be.bignumber.equal(initialSupply.plus(1));
     });
 
     it('should fail to mint if the ammount exceeds the cap', async function () {

@@ -23,8 +23,8 @@ contract BeyondToken is Initializable,
     string public symbol = "BYD";
     uint8 public decimals = 18;
     string public version = "1.0";
-    uint256 public maxCap = 10 * (10 ** 9); //10 billion * 10^18
-    uint256 public initialSupply = 6 * (10 ** 9); //6 billion * 10^18
+    uint256 public maxCap = 10 * (10 ** 9) * (10 ** 18); //10 billion * 10^18
+    uint256 public initialSupply = 1 * (10 ** 9) * (10 ** 18); //1 billion * 10^18
 
     /**
      * Constructor function
