@@ -13,7 +13,7 @@
     "chai": "^4.2.0",
     "chai-bignumber": "^2.0.2",
     "ethjs-abi": "^0.2.1",
-    "lite-server": "^2.5.3",
+    "lite-server": "^2.6.1",
     "openzeppelin-solidity": "^2.0.0",
     "pify": "^4.0.1",
     "truffle-hdwallet-provider": "0.0.6",
